@@ -1,0 +1,118 @@
+.facilities {
+  padding: 6rem 6vw;
+  background: var(--dark-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.facilities__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.facilities__header .section-label {
+  justify-content: center;
+}
+
+.facilities__header .section-label::after { display: none; }
+
+.facilities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.facility-card {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.facility-card:hover { transform: translateY(-6px); }
+
+.facility-card__img {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.facility-card__img img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-card__img img {
+  transform: scale(1.08);
+}
+
+.facility-card__no-img {
+  height: 200px;
+  background: rgba(201,169,122,0.06);
+  border: 1px dashed rgba(201,169,122,0.3);
+  margin-bottom: 1rem;
+}
+
+.facility-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 1px solid rgba(201,169,122,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: -30px auto 1rem;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.facility-card:hover .facility-card__icon {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.facility-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.facility-card__desc {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: #8888a0;
+  padding: 0 0.5rem;
+}
+
+/* Deco */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,122,0.1);
+}
+
+.deco-circle.lg {
+  width: 300px; height: 300px;
+  top: -80px; left: -80px;
+}
+
+.deco-circle.sm {
+  width: 80px; height: 80px;
+  bottom: 80px; left: 15%;
+}
+
+@media (max-width: 900px) {
+  .facilities__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 550px) {
+  .facilities__grid { grid-template-columns: 1fr; }
+}

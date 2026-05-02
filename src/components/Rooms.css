@@ -1,0 +1,127 @@
+.rooms {
+  padding: 6rem 6vw;
+  background: var(--dark);
+}
+
+.rooms__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.rooms__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.room-card {
+  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--dark-2);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201,169,122,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.room-card.featured {
+  border-color: rgba(201,169,122,0.25);
+  background: var(--dark-3);
+}
+
+.room-card__img {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.room-card__img img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-card__img img {
+  transform: scale(1.06);
+}
+
+.room-card__price {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.92);
+  color: var(--dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+}
+
+.room-card__price strong { color: var(--dark); }
+
+.room-card__amenities {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.amenity-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  transition: background 0.2s;
+  cursor: default;
+}
+
+.amenity-icon:hover { background: var(--gold); }
+
+.room-card__info {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.room-card__info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.room-card__meta {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.room-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #8888a0;
+}
+
+.room-btn {
+  font-size: 0.75rem;
+  padding: 0.65rem 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .rooms__grid { grid-template-columns: 1fr 1fr; }
+  .rooms__header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+@media (max-width: 560px) {
+  .rooms__grid { grid-template-columns: 1fr; }
+}
