@@ -1,8 +1,65 @@
 .testimonials {
-  padding: 6rem 6vw;
-  background: var(--dark-2);
-  position: relative;
+ position: relative;
+  padding: 7rem 6vw 8rem;
+  background: var(--dark); /* changed from --dark-2 to --dark */
   overflow: hidden;
+  font-family: var(--font-sans);
+  margin-top: -100px;
+  margin-bottom: -30px;
+}
+
+/* .testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+} */
+
+.testimonials::before {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(201,169,122,0.07) 0%, transparent 70%);
+  top: -100px;
+  right: -80px;
+  animation: orb-drift-1 18s ease-in-out infinite;
+}
+
+.testimonials::after {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(201,169,122,0.05) 0%, transparent 70%);
+  bottom: 60px;
+  left: 5%;
+  animation: orb-drift-2 22s ease-in-out infinite;
+}
+
+.testimonials-ring-1 {
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(201,169,122,0.07);
+  bottom: -50px;
+  right: 12%;
+  animation: spin-slow 60s linear infinite;
+}
+
+.testimonials-ring-2 {
+  width: 180px;
+  height: 180px;
+  border: 1px dashed rgba(201,169,122,0.06);
+  bottom: 10px;
+  right: 14%;
+  animation: spin-slow 40s linear infinite reverse;
+}
+
+.testimonials-ring-3 {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(201,169,122,0.1);
+  top: 50px;
+  left: 3%;
+  animation: spin-slow 25s linear infinite;
 }
 
 .testimonials__header {
@@ -42,24 +99,7 @@
   left: calc(6vw + 170px);
 }
 
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  animation: fadeIn 0.4s ease;
-}
 
-.testi-card {
-  background: var(--dark);
-  border: 1px solid rgba(255,255,255,0.05);
-  padding: 2rem;
-  transition: border-color 0.3s, transform 0.3s;
-}
-
-.testi-card:hover {
-  border-color: rgba(201,169,122,0.25);
-  transform: translateY(-4px);
-}
 
 .testi-card__top {
   display: flex;
@@ -80,6 +120,25 @@
   flex-shrink: 0;
   overflow: hidden;
   border: 2px solid rgba(201,169,122,0.3);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.testi-card {
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.testi-card:hover {
+  border-color: rgba(201,169,122,0.25);
+  transform: translateY(-4px);
 }
 
 .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
