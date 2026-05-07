@@ -1,25 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Facilities.css';
+import bike from '../images/bike.jpeg';
+import guide from '../images/guide.jpeg';
+import taxi from '../images/taxi.jpeg';
 
 const facilities = [
   {
     title: 'Taxi Service',
     desc: 'Enjoy safe, reliable, and hassle-free travel with our convenient local taxi services.',
-    img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80',
+    img: taxi,
     tag: 'Transport',
     color: '#e8b86d',
   },
   {
     title: 'Tourist Guide',
     desc: 'Discover hidden gems and iconic attractions with experienced local guides by your side.',
-    img: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80',
+    img: guide,
     tag: 'Experience',
     color: '#8de8a0',
   },
   {
     title: 'Bike Rental',
     desc: 'Explore the beauty of Chikmagaluru with comfortable and well-maintained bikes for every adventure.',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    img: bike,
     tag: 'Adventure',
     color: '#e88d6d',
   },

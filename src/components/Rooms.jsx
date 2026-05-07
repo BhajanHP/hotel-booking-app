@@ -9,14 +9,16 @@ const rooms = [
     title: 'Deluxe Room',
     Total_Rooms: '4',
     adults: 2,
+    child:1,
     img: delux,
     amenities: ['wifi', 'tv', 'ac'],
     tag: 'Popular',
   },
   {
     title: 'Suite Room',
-    Total_Rooms: '4',
+    Total_Rooms: '2',
     adults: 2,
+    child:1,
     img: suit,
     amenities: ['wifi', 'tv', 'ac'],
     featured: true,
@@ -24,7 +26,7 @@ const rooms = [
   },
   {
     title: 'Executive Room',
-    Total_Rooms: '4',
+    Total_Rooms: '2',
     adults: 2,
     img: exe,
     amenities: ['wifi', 'tv', 'ac'],
@@ -109,7 +111,7 @@ const Rooms = () => {
 
         <div className="rooms__header-stat">
           <div className="stat-item">
-            <strong>12+</strong>
+            <strong>8+</strong>
             <span>Room Types</span>
           </div>
           <div className="stat-divider" />
@@ -174,13 +176,25 @@ const Rooms = () => {
                   {room.Total_Rooms} Rooms
                 </div>
                 <div className="meta-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13">
-                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                  </svg>
-                  {room.adults} Adults
-                </div>
-              </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+             </svg>
 
+             {room.adults} Adults
+
+              {room.child && (
+               <>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+
+      {room.child} Child
+    </>
+  )}
+</div>
+              </div>
               <div className="room-card__footer">
                 <button className="room-card__btn">
                   <span>Stay with us</span>

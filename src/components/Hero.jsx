@@ -86,14 +86,29 @@ const Hero = () => {
             <span className="hero__btn-arrow">→</span>
           </button>
 
-          <button className="hero__play">
-            <div className="play-circle">
-              <svg className="play-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-            {/* <span>Watch Video</span> */}
-          </button>
+          <button
+                className="hero__play"
+                onClick={() =>
+                  window.open(
+                    'https://www.youtube.com/shorts/h-uSRVdPt-Y',
+                    '_blank'
+                  )
+                }
+          >
+         <div className="play-circle">
+            <svg
+              className="play-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              width="18"
+              height="18"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+
+  {/* <span>Watch Video</span> */}
+</button>
         </div>
       </div>
 

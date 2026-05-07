@@ -1,33 +1,37 @@
 import React, { useState } from 'react';
 import './Testimonials.css';
+import r1 from '../images/r1.jpeg';
+import r2 from '../images/r2.jpeg';
+import r3 from '../images/r3.jpeg';
+import r4 from '../images/r4.jpeg';
 
 const testimonials = [
   {
     name: 'Pramod C V',
     location: 'Bengaluru',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+    avatar: r1,
     text: 'The stay at MGM Residency was absolutely amazing with world-class service made it a trip we will never forget.',
   },
   {
     name: 'Shruthi',
     location: 'Mysuru',
     rating: 4,
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80',
+    avatar: r3,
     text: 'Exceptional hospitality, beautiful room, and a room that felt like home. The staff went above and beyond to ensure every moment of our trip was perfect.',
   },
   {
     name: 'Rahul Sharma',
     location: 'Mumbai',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    avatar: r2,
     text: 'The perfect escape from city life. Coffee plantation views, fresh air, and impeccable service. This hotel truly lives up to its five-star reputation.',
   },
   {
-    name: 'Suhas Y C',
+    name: 'Ramya',
     location: 'Bengaluru',
     rating: 4,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80',
+    avatar: r4,
     text: 'Loved the bike rental and tourist guide services. Explored Chikmagaluru in the most authentic way possible. Will definitely be back next season.',
   },
 ];
