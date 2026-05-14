@@ -34,7 +34,7 @@ const ChatBubble = () => (
 );
 const WhatsAppBubble = () => (
   <a
-    href="https://wa.me/9108066669"
+    href="https://wa.me/919108066669"
     target="_blank"
     rel="noopener noreferrer"
     className="chat-bubble whatsapp-bubble"
