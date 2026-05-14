@@ -65,8 +65,13 @@ const Footer = () => {
           <h4 className="footer__col-heading">Quick Links</h4>
           <div className="footer__col-line" />
           <ul>
-            {['About Us', 'Our Gallery', 'Rooms & Suites','Contact'].map(link => (
-              <li key={link}><a href="#">{link}</a></li>
+            {[
+              { label: 'About Us', href: '#about' },
+              { label: 'Our Gallery', href: '#gallery' },
+              { label: 'Rooms & Suites', href: '#rooms' },
+              { label: 'Contact', href: '#contact' }
+            ].map(link => (
+              <li key={link.label}><a href={link.href}>{link.label}</a></li>
             ))}
           </ul>
         </div>
