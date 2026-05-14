@@ -7,9 +7,7 @@ import room4 from '../images/room4.jpeg';
 
 const features = [
   { icon: '⭐', label: 'Best Rooms', sub: '5-Star Rated' },
-  // { icon: '☕', label: 'Breakfast', sub: 'Each Morning' },
-  { icon: '🛁', label: 'Jacuzzi Tub', sub: 'Double Whirlpool' },
-  // { icon: '🍾', label: 'Wet Bar', sub: 'With Refrigerator' },
+  { icon: '✨', label: 'Luxury Stay', sub: 'Premium Comfort' },
 ];
 
 const roomTypes = [
